@@ -1,0 +1,59 @@
+---
+title: "YAML QDA Demo"
+author: "Blair Wang"
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+    toc: true
+    toc-depth: 5
+    toc-expand: 3
+    embed-resources: true
+---
+
+## Setup
+
+First we need to read in the two files (one YAML file, one CSV file):
+
+```{r}
+# To handle the Gioia data structure YAML file
+library(yaml)
+library(foreach)
+gioia_data_structure <- read_yaml("datasets/copilot_sample_data_structure.yaml")
+
+# To handle the quotes CSV file
+library(dplyr, warn.conflicts=FALSE)
+library(readr)
+library(simplermarkdown)
+quotes_file <- read_csv("datasets/sample_quotes.csv", col_types = cols(.default = "c"))
+```
+
+## Data Structure with Quotes
+
+```{r, results='asis'}
+print_code3 = function(key, value) {
+  relevant_quotes <- quotes_file %>% filter(code3 == key) %>% select(quote_id, quote_text, quote_person)
+  relevant_quotes_count <- relevant_quotes %>% summarise(count = n())
+  
+  cat(paste0("##### ", value$label, "\n"))
+  cat(paste0("- **Unique identifier: **", "`", key, "`", "\n"))
+  cat(paste0("- **Definition: **", value$definition, "\n"))
+  
+  if (relevant_quotes_count > 0) {
+    cat(paste0("- **Relevant quotes: **", relevant_quotes_count, "\n\n"))
+    cat(md_table(relevant_quotes))
+  } else {
+    cat(paste0("- **🔴 Warning! No relevant quotes found yet!**", "\n\n"))
+  }
+}
+
+for (x in gioia_data_structure$aggregate_dimensions) {
+  cat(paste("### ", x$label, "\n"))
+  
+  for (y in x$second_order_themes) {
+    cat(paste("#### ", y$label, "\n"))
+    
+    foreach(key = names(y$first_order_concepts), value = y$first_order_concepts) %do% print_code3(key, value)
+  }
+}
+```

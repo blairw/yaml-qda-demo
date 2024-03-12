@@ -1,0 +1,93 @@
+aggregate_dimensions:
+  CODE3_PERSONAL_GROWTH:
+    label: "Personal Growth and Exploration"
+    second_order_themes:
+      CODE2_CURIOSITY:
+        label: "Academic Curiosity"
+        first_order_concepts:
+          CODE1_INTELLECTUAL_STIM:
+            label: "Intellectual Stimulation"
+            definition: "Students are motivated by the opportunity to engage with diverse subjects, explore new ideas, and expand their knowledge."
+          CODE1_DESIRE_LEARN:
+            label: "Desire for Learning"
+            definition: "The University of Galway offers a rich academic environment that encourages lifelong learning and personal development."
+      CODE2_CULTURAL:
+        label: "Cultural Immersion"
+        first_order_concepts:
+          CODE1_IRISH_HERITAGE:
+            label: "Irish Heritage"
+            definition: "Students are drawn to Galway’s vibrant cultural scene, including traditional music, language, and folklore."
+          CODE1_CONNEMARA:
+            label: "Exploring Connemara"
+            definition: "The proximity to the Connemara Gaeltacht provides a unique chance to immerse in Irish language and arts."
+      CODE2_CAREER_PROSPECTS:
+        label: "Cultural Immersion"
+        first_order_concepts:
+          CODE1_IND_CONNECT:
+            label: "Industry Connections"
+            definition: "Galway’s thriving tech and biomedical sectors offer networking opportunities and potential job placements."
+          CODE1_GLOBAL:
+            label: "Global Perspective"
+            definition: "Studying in Ireland enhances employability by fostering adaptability and cross-cultural competence."
+  CODE3_LOCATION_LIFESTYLE:
+    label: "Location and Lifestyle"
+    second_order_themes:
+      CODE2_COASTAL_BEAUTY:
+        label: "Coastal Beauty"
+        first_order_concepts:
+          CODE1_SCENIC:
+            label: "Scenic Views"
+            definition: "Galway’s coastal setting, near the Aran Islands, provides an inspiring backdrop for study."
+          CODE1_OUTDOOR:
+            label: "Outdoor Activities"
+            definition: "Students appreciate the chance to explore rugged landscapes, hike, and enjoy fresh sea air."
+      CODE2_SOCIAL_SCENE:
+        label: "Social Scene"
+        first_order_concepts:
+          CODE1_FESTIVALS_ARTS:
+            label: "Festivals and Arts"
+            definition: "The lively social scene encourages connections and friendships."
+          CODE1_CAFES_PUBS:
+            label: "Bustling Cafés and Pubs"
+            definition: "The proximity to the Connemara Gaeltacht provides a unique chance to immerse in Irish language and arts."
+      CODE2_BILINGUAL_ENV:
+        label: "Bilingual Environment"
+        first_order_concepts:
+          CODE1_LANGUAGE_SKILLS:
+            label: "Language Skills"
+            definition: "Studying in a bilingual city enhances language proficiency (English and Irish)."
+          CODE1_CULTURAL_FUSION:
+            label: "Cultural Fusion"
+            definition: "Exposure to both languages enriches students’ understanding of Irish identity."
+  CODE3_ACADEMIC_EXCELLENCE:
+    label: "Academic Excellence"
+    second_order_themes:
+      CODE2_FACULTY:
+        label: "Renowned Faculty"
+        first_order_concepts:
+          CODE1_EXPERTISE:
+            label: "Expertise"
+            definition: "Students value the opportunity to learn from respected scholars and researchers."
+          CODE1_INTERDISCIPLINARY:
+            label: "Interdisciplinary Approach"
+            definition: "Galway’s faculty bridges various disciplines, encouraging holistic learning."
+      CODE2_SOCIAL_SCENE:
+        label: "Research Opportunities"
+        first_order_concepts:
+          CODE1_RESEARCH_CENTERS:
+            label: "Research Centers"
+            definition: "Students are motivated by the chance to engage in cutting-edge research across fields."
+          CODE1_THESIS_SUPPORT:
+            label: "Thesis Support"
+            definition: "Galway provides resources for students pursuing research projects."
+      CODE2_ALMUNI_SUCCESS_STORIES:
+        label: "Alumni Success Stories"
+        first_order_concepts:
+          CODE1_INSPIRATION:
+            label: "Inspiration"
+            definition: "Hearing about successful alumni who started their journey at Galway encourages current students."
+          CODE1_CAREER_TRAJ:
+            label: "Career Trajectories"
+            definition: "Alumni achievements demonstrate the university’s impact on professional paths."
+
+
