@@ -30,6 +30,8 @@ quotes_file <- read_csv("datasets/sample_quotes.csv", col_types = cols(.default 
 
 ## Data Structure with Quotes
 
+We set up the function `print_code3(...)` to handle the "final mile" (immediate touch point between data structure from YAML file and quotes from CSV file):
+
 ```{r, results='asis'}
 print_code3 = function(key, value) {
   relevant_quotes <- quotes_file %>% filter(code3 == key) %>% select(quote_id, quote_text, quote_person)
@@ -46,7 +48,13 @@ print_code3 = function(key, value) {
     cat(paste0("- **🔴 Warning! No relevant quotes found yet!**", "\n\n"))
   }
 }
+```
 
+—
+
+Now, with that set up, we can go ahead and generate the output:
+
+```{r, results='asis'}
 for (x in gioia_data_structure$aggregate_dimensions) {
   cat(paste("### ", x$label, "\n"))
   
